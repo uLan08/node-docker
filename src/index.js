@@ -20,7 +20,7 @@ getos((err, result) => {
 	app.use(router.get('/', (ctx) => {
 		ctx.status = 200
 		const { dist, codename, release } = result
-		const system = `${dist} ${codename || ''} ${release}`
+		const system = `${dist} ${codename || ''} ${release || ''}`
 		ctx.body = `<div>Hello World from <b>${os.hostname()}</b>, I am on <b>${system}</b></div<>`	
 	}).routes())
 	app.use(helmet())
