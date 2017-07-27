@@ -1,0 +1,36 @@
+{
+  "name": "node-docker",
+  "author": "Patrick Rainier Juen",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=koa* nodemon src/index.js --exec babel-node --dev",
+    "build": "NODE_ENV=production babel src --source-maps --out-dir dist && npm prune --production",
+    "serve": "node dist/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-plugin-transform-regenerator": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-register": "^6.24.0",
+    "babel-watch": "^2.0.5",
+    "eslint": "3.19.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.22.0",
+    "dotenv-safe": "^4.0.3",
+    "getos": "^3.0.1",
+    "koa": "^2.3.0",
+    "koa-helmet": "^3.2.0",
+    "koa-router": "^7.1.1"
+  }
+}
