@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.22.0",
-    "dotenv-safe": "^4.0.3",
+    "dotenv": "^4.0.0",
     "getos": "^3.0.1",
     "koa": "^2.3.0",
     "koa-helmet": "^3.2.0",
