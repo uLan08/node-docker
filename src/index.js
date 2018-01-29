@@ -8,7 +8,6 @@ import getos from 'getos'
 dotenv.load()
 
 const config = {
-	production: process.env['NODE_ENV'] === 'production',
 	port: process.env['PORT'] || 8080
 }
 
