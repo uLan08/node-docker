@@ -1,6 +1,5 @@
 import Koa from 'koa'
 import Router from 'koa-router'
-import helmet from 'koa-helmet'
 import dotenv from 'dotenv'
 import os from 'os'
 import getos from 'getos'
@@ -22,7 +21,6 @@ getos((err, result) => {
 		const system = `${dist} ${codename || ''} ${release || ''}`
 		ctx.body = `<div>Hello World from <b>${os.hostname()}</b>, I am on <b>${system}</b></div<>`	
 	}).routes())
-	app.use(helmet())
 	app.use(router.allowedMethods())
 	app.listen(config.port)
 })
