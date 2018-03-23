@@ -15,5 +15,5 @@ getos((err, result) => {
 		ctx.body = `<div>Hello World from <b>${os.hostname()}</b>, I am on <b>${system}</b></div<>`	
 	}).routes())
 	app.use(router.allowedMethods())
-	app.listen(8080)
+	app.listen(process.env['PORT'] || 8080)
 })

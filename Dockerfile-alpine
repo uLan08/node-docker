@@ -1,7 +1,7 @@
-FROM node:6.11-alpine
-RUN npm install -g yarn
+FROM node:8.9-alpine
 WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install
 COPY . .
-RUN yarn install && yarn build
 EXPOSE 8080
-CMD node dist/index.js 
+CMD ["node", "src/index.js"]
