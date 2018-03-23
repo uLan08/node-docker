@@ -18,6 +18,7 @@ getos((err, result) => {
 	app.listen(process.env['PORT'] || 8080)
 })
 
+// For handling exit signals thru docker
 const signals = ['SIGINT', 'SIGTERM']
 signals.forEach((signal) => {
 	process.on(signal, () => {
