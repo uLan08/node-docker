@@ -1,8 +1,8 @@
-import Koa from 'koa'
-import Router from 'koa-router'
-import dotenv from 'dotenv'
-import os from 'os'
-import getos from 'getos'
+const Koa = require('koa')
+const Router = require('koa-router')
+const dotenv = require('dotenv')
+const os = require('os')
+const getos = require('getos')
 
 dotenv.load()
 
