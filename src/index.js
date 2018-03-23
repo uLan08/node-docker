@@ -17,3 +17,10 @@ getos((err, result) => {
 	app.use(router.allowedMethods())
 	app.listen(process.env['PORT'] || 8080)
 })
+
+const signals = ['SIGINT', 'SIGTERM']
+signals.forEach((signal) => {
+	process.on(signal, () => {
+		process.exit()
+	})
+})
