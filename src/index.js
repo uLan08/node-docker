@@ -1,14 +1,7 @@
 const Koa = require('koa')
 const Router = require('koa-router')
-const dotenv = require('dotenv')
 const os = require('os')
 const getos = require('getos')
-
-dotenv.load()
-
-const config = {
-	port: process.env['PORT'] || 8080
-}
 
 const app = new Koa()
 
@@ -22,5 +15,5 @@ getos((err, result) => {
 		ctx.body = `<div>Hello World from <b>${os.hostname()}</b>, I am on <b>${system}</b></div<>`	
 	}).routes())
 	app.use(router.allowedMethods())
-	app.listen(config.port)
+	app.listen(8080)
 })
